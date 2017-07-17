@@ -66,16 +66,7 @@ wptKey: "8273e805d6e7ae8445ee74062bc7198f1b5125ca1e748924ff841e169669a4693421"
 #                                                                             #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-#alerts:
-#  emailAlert:
-#    type: "email"
-#    recipients: ["ENCRYPTED_EMAIL_ADDRESS"]
-#  otherEmailAlert:
-#    type: "email"
-#    recipients: ["ENCRYPTED_EMAIL_ADDRESS2", "ENCRYPTED_EMAIL_ADDRESS3"]
-#  slackAlert:
-#    type: "slack"
-#    hookUrl: "ENCRYPTED_SLACK_HOOK_URL"
-#    channel: "#speedtracker"
-#    username: "SpeedTracker"
-#    iconEmoji: ":grimacing:"
+alerts:
+  emailAlert:
+    type: 'email'
+    recipients: ['a22fe00183efbdcf5ba42b477ac04b94490a308e4778ad37f4994d00d67fe43c']

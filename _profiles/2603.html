@@ -5,7 +5,9 @@ parameters:
     connectivity: Cable
     location: 'Dulles:Chrome'
     runs: '1'
-    url: 'zbyszek:zbyszek@http://pixers.pl.2603.test.pixers.org'
+    url: 'http://pixers.pl.2603.test.pixers.org'
+    login: 'zbyszek'
+    password: 'zbyszek'
 budgets:
     - { metric: TTFB, max: 400, alerts: [emailAlert] }
     - { metric: firstPaint, max: 2000, alerts: [emailAlert] }

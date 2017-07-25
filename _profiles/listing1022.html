@@ -1,3 +1,4 @@
+---
 name: "Listing"
 default: true
 parameters:
@@ -6,11 +7,10 @@ parameters:
   runs: 1
   url: "https://pixers.pl/"
 budgets:
-  -
     metric: TTFB
     max: 400
     alerts: ["emailAlert"]
-  -
     metric: firstPaint
     max: 2000
     alerts: ["emailAlert"]
+---

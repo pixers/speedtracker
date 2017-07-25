@@ -6,5 +6,6 @@ parameters:
     runs: '1'
     url: 'http://pixers.pl/fototapety/'
 budgets:
-    - { metric: TTFB, max: 400, alerts: [emailAlert] }
-    - { metric: firstPaint, max: 2000, alerts: [emailAlert] }
+    metric: TTFB, max: 400, alerts: [emailAlert]
+    -
+    metric: firstPaint, max: 2000, alerts: [emailAlert]

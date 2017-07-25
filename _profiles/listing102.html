@@ -1,0 +1,19 @@
+ \r\n
+		name: "Pixers"\r\n
+		default: true\r\n
+		parameters:\r\n
+		  connectivity: "Cable"\r\n
+		  location: "Dulles:Chrome"\r\n
+		  runs: 1\r\n
+		  url: "https://pixers.pl/"\r\n
+		budgets:\r\n
+		  -\r\n
+		    metric: TTFB\r\n
+		    max: 400\r\n
+		    alerts: ["emailAlert"]\r\n
+		  -\r\n
+		    metric: firstPaint\r\n
+		    max: 2000\r\n
+		    alerts: ["emailAlert"]\r\n
+		---\r\n
+		

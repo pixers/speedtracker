@@ -1,0 +1,13 @@
+---
+name: pixers
+default: false
+parameters:
+    connectivity: Cable
+    location: Dulles_MotoG
+    runs: '1'
+    url: 'http://pixers.pl/'
+budgets:
+    - { metric: TTFB, max: 400, alerts: [emailAlert] }
+    - { metric: firstPaint, max: 2000, alerts: [emailAlert] }
+
+---

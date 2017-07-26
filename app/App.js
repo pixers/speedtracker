@@ -126,6 +126,8 @@ class App extends React.Component {
           onPeriodChange={this._changePeriod.bind(this)}
           onProfileChange={this._changeProfile.bind(this)} />
 
+        <a href="#">Rerun test</a>
+
         {this.state.loading ? <Loader /> : <Dashboard {...this.state} />}
 
         <Footer />

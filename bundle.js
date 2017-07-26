@@ -23075,7 +23075,8 @@
 	  _createClass(Dashboard, [{
 	    key: 'render',
 	    value: function render() {
-	      var props = this.props;
+	      var profile = this.props.profile;
+	      var key = 'Pixers123!%40%23';
 	      var results = this.props.results;
 	      var dates = Utils.getDateRangeForPeriod(this.props.period);
 	      var dateFrom = dates.from.getTime();
@@ -23114,7 +23115,15 @@
 	      };
 
 	      var reRunTest = function reRunTest(event, data) {
-	        console.log(props);
+	        var path = 'https://api.speedtracker.org/v1/test/pixers/speedtracker/master/' + profile.slug + '?key=' + key;
+
+	        window.fetch(path).then(function (response) {
+	          if (response.ok === false) {
+	            alert('Something went wrong!');
+	          } else {
+	            alert('Ok!');
+	          }
+	        });
 	      };
 
 	      return _react2.default.createElement(

@@ -6,7 +6,8 @@ import * as Utils from './Utils'
 
 class Dashboard extends React.Component {
   render () {
-    const props = this.props;
+    const profile = this.props.profile
+    const key = 'Pixers123!%40%23'
     const results = this.props.results
     const dates = Utils.getDateRangeForPeriod(this.props.period)
     const dateFrom = dates.from.getTime()
@@ -47,7 +48,16 @@ class Dashboard extends React.Component {
     }
 
     const reRunTest = function (event, data) {
-      console.log(props);
+      let path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
+
+      window.fetch(path).then(response => {
+        if (response.ok === false) {
+          alert('Something went wrong!')
+        } else {
+          alert('Ok!')
+        }
+      })
+
     }
 
     return (

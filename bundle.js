@@ -700,11 +700,6 @@
 	      }
 	    }
 	  }, {
-	    key: 'reRunTest',
-	    value: function reRunTest(event, data) {
-	      console.log(event);
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -713,11 +708,6 @@
 	        _react2.default.createElement(_TopBar2.default, _extends({}, this.state, {
 	          onPeriodChange: this._changePeriod.bind(this),
 	          onProfileChange: this._changeProfile.bind(this) })),
-	        _react2.default.createElement(
-	          'a',
-	          { href: '#', onClick: this.reRunTest },
-	          'Rerun test'
-	        ),
 	        this.state.loading ? _react2.default.createElement(_Loader2.default, null) : _react2.default.createElement(_Dashboard2.default, this.state),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
@@ -23122,9 +23112,18 @@
 	        window.open(testUrl, '_blank');
 	      };
 
+	      var reRunTest = function reRunTest(event, data) {
+	        console.log(this.props);
+	      };
+
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'u-wrapper' },
+	        _react2.default.createElement(
+	          'a',
+	          { href: '#', onClick: reRunTest },
+	          'Rerun test'
+	        ),
 	        _react2.default.createElement(_Section2.default, _extends({}, this.props, {
 	          id: 'loadTimes',
 	          footNote: _react2.default.createElement(

@@ -45,8 +45,14 @@ class Dashboard extends React.Component {
       window.open(testUrl, '_blank')
     }
 
+    const reRunTest = function (event, data) {
+      console.log(this.props);
+    }
+
     return (
       <div className='u-wrapper'>
+        <a href="#" onClick={reRunTest}>Rerun test</a>
+
         <Section {...this.props}
           id='loadTimes'
           footNote={(

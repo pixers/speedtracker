@@ -1,0 +1,13 @@
+---
+name: dupa2
+default: false
+parameters:
+    connectivity: Cable
+    location: Dulles_MotoG
+    runs: '1'
+    url: 'http://pixers.pl.dupa2.test.pixers.org'
+budgets:
+    - { metric: TTFB, max: 400, alerts: [emailAlert] }
+    - { metric: firstPaint, max: 2000, alerts: [emailAlert] }
+
+---

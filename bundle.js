@@ -715,7 +715,7 @@
 	          onProfileChange: this._changeProfile.bind(this) })),
 	        _react2.default.createElement(
 	          'a',
-	          { href: '#', onClick: reRunTest },
+	          { href: '#', onClick: this.reRunTest },
 	          'Rerun test'
 	        ),
 	        this.state.loading ? _react2.default.createElement(_Loader2.default, null) : _react2.default.createElement(_Dashboard2.default, this.state),

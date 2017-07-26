@@ -6,6 +6,7 @@ import * as Utils from './Utils'
 
 class Dashboard extends React.Component {
   render () {
+    const props = this.props;
     const results = this.props.results
     const dates = Utils.getDateRangeForPeriod(this.props.period)
     const dateFrom = dates.from.getTime()
@@ -46,7 +47,7 @@ class Dashboard extends React.Component {
     }
 
     const reRunTest = function (event, data) {
-      console.log(this.props);
+      console.log(props);
     }
 
     return (

@@ -23075,6 +23075,7 @@
 	  _createClass(Dashboard, [{
 	    key: 'render',
 	    value: function render() {
+	      var props = this.props;
 	      var results = this.props.results;
 	      var dates = Utils.getDateRangeForPeriod(this.props.period);
 	      var dateFrom = dates.from.getTime();
@@ -23113,7 +23114,7 @@
 	      };
 
 	      var reRunTest = function reRunTest(event, data) {
-	        console.log(this.props);
+	        console.log(props);
 	      };
 
 	      return _react2.default.createElement(

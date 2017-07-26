@@ -119,18 +119,12 @@ class App extends React.Component {
     }
   }
 
-  reRunTest (event, data) {
-    console.log(event);
-  }
-
   render () {
     return (
       <div>
         <TopBar {...this.state}
           onPeriodChange={this._changePeriod.bind(this)}
           onProfileChange={this._changeProfile.bind(this)} />
-
-        <a href="#" onClick={this.reRunTest}>Rerun test</a>
 
         {this.state.loading ? <Loader /> : <Dashboard {...this.state} />}
 

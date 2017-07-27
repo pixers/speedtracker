@@ -7,7 +7,6 @@ import * as Utils from './Utils'
 class Dashboard extends React.Component {
   render () {
     const profile = this.props.profile
-    const key = 'Pixers123!%40%23'
     const results = this.props.results
     const dates = Utils.getDateRangeForPeriod(this.props.period)
     const dateFrom = dates.from.getTime()
@@ -48,16 +47,21 @@ class Dashboard extends React.Component {
     }
 
     const reRunTest = function (event, data) {
-      let path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
+      const key = prompt("Please enter password")
 
-      window.fetch(path).then(response => {
-        if (response.ok === false) {
-          alert('Something went wrong!')
-        } else {
-          alert('Ok!')
-        }
-      })
+      if (key != null && key.length > 0) {
+        let path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
 
+        window.fetch(path).then(response => {
+          if (response.ok === false) {
+            alert('Something went wrong!')
+          } else {
+            alert('The test has run successfully')
+          }
+        })
+      } else {
+        alert('You must enter a password')
+      }
     }
 
     return (

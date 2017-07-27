@@ -47,10 +47,12 @@ class Dashboard extends React.Component {
     }
 
     const reRunTest = function (event, data) {
-      const key = prompt("Please enter password")
+      let key = prompt("Please enter password")
 
       if (key != null && key.length > 0) {
-        let path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
+        key = encodeURIComponent(key)
+
+        const path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
 
         window.fetch(path).then(response => {
           if (response.ok === false) {

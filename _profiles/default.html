@@ -11,6 +11,9 @@ name: "Pixers"
 # 
 default: true
 
+#Defines an interval (in hours) for the test to be executed (see scheduling tests)
+interval: 12
+
 #
 # If you want tests to be repeated automatically, you can an interval (in hours)
 # with a minimum value of 12, as only two scheduled tests per day are allowed.
@@ -24,10 +27,12 @@ default: true
 # https://www.npmjs.com/package/webpagetest
 #
 parameters:
-  connectivity: "Cable"
-  location: "Dulles:Chrome"
+  connectivity: '3G'
+  location: 'Dulles:Chrome'
+  firstViewOnly: true
   runs: 1
-  url: "https://pixers.pl/"
+  url: "https://pixers.pl"
+  video: true
 
 #
 # The URL of the WebPageTest instance to be used with this profile. Please note that
@@ -54,5 +59,9 @@ budgets:
   -
     metric: firstPaint
     max: 2000
+    alerts: ["emailAlert"]
+  -
+    metric: fullyLoaded
+    max: 10000
     alerts: ["emailAlert"]
 ---

@@ -3,7 +3,7 @@
 # The human-friendly name of the profile. Whenever you're asked for the profile
 # ID, it refers to the name of the profile file — in this case, "default".
 #
-name: "Pixers"
+name: "Listing"
 
 #
 # The default profile will be the one shown when accessing the root URL of your
@@ -27,11 +27,11 @@ interval: 12
 # https://www.npmjs.com/package/webpagetest
 #
 parameters:
-  connectivity: '3G'
-  location: 'Dulles:Chrome'
+  connectivity: 'Cable'
+  location: 'ec2-eu-central-1:Chrome'
   firstViewOnly: true
   runs: 1
-  url: "https://pixers.pl"
+  url: "https://pixers.pl/fototapety"
   video: true
 
 #
@@ -62,6 +62,6 @@ budgets:
     alerts: ["emailAlert"]
   -
     metric: fullyLoaded
-    max: 10000
+    max: 7000
     alerts: ["emailAlert"]
 ---

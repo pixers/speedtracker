@@ -11,9 +11,6 @@ name: "Listing"
 # 
 default: true
 
-#Defines an interval (in hours) for the test to be executed (see scheduling tests)
-#interval: 24
-
 #
 # If you want tests to be repeated automatically, you can an interval (in hours)
 # with a minimum value of 12, as only two scheduled tests per day are allowed.
@@ -28,11 +25,11 @@ default: true
 #
 parameters:
   connectivity: 'Cable'
-  location: 'ec2-eu-central-1:Chrome'
+  location: 'Dulles_Linux:Chrome'
   firstViewOnly: true
   runs: 1
   url: "https://pixers.pl/fototapety"
-  video: true
+  video: false
 
 #
 # The URL of the WebPageTest instance to be used with this profile. Please note that

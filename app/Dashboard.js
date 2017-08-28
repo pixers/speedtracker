@@ -55,6 +55,7 @@ class Dashboard extends React.Component {
         const path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
 
         window.fetch(path).then(response => {
+          console.log(response);
           if (response.ok === false) {
             alert('Something went wrong!')
           } else {

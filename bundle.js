@@ -23132,7 +23132,8 @@
 	          }).then(function (result) {
 	            console.log(result);
 	            if (typeof result.testId !== 'undefined') {
-	              alert('Test id: ' + result.testId);
+	              var win = window.open('https://www.webpagetest.org/result/' + result.testId, '_blank');
+	              win.focus();
 	            }
 	          });
 	        } else {

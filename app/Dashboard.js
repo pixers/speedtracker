@@ -55,15 +55,18 @@ class Dashboard extends React.Component {
         const path = `https://api.speedtracker.org/v1/test/pixers/speedtracker/master/${profile.slug}?key=${key}`
 
         window.fetch(path).then(response => {
-          console.log(response);
+          console.log(response)
           if (response.ok === false) {
             alert('Something went wrong!')
           } else {
             alert('The test has run successfully')
           }
-          return response.json();
+          return response.json()
         }).then(result => {
-          console.log(result);
+          console.log(result)
+          if (typeof result.testId !== 'undefined') {
+            alert('Test id: ' + result.testId)
+          }
         });
       } else {
         alert('You must enter a password')

@@ -23131,6 +23131,9 @@
 	            return response.json();
 	          }).then(function (result) {
 	            console.log(result);
+	            if (typeof result.testId !== 'undefined') {
+	              alert('Test id: ' + result.testId);
+	            }
 	          });
 	        } else {
 	          alert('You must enter a password');

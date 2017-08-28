@@ -61,7 +61,10 @@ class Dashboard extends React.Component {
           } else {
             alert('The test has run successfully')
           }
-        })
+          return response.json();
+        }).then(result => {
+          console.log(result);
+        });
       } else {
         alert('You must enter a password')
       }

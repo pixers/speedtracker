@@ -32,6 +32,8 @@
   margin: 0 6px;
   outline: 0;
   padding-right: 20px;
+  max-width: 440px;
+  overflow: hidden !important;
 
   &:focus {
     border-bottom-color: rgba(white, 0.5);

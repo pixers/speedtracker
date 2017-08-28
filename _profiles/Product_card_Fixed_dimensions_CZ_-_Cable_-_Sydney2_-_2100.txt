@@ -1,0 +1,24 @@
+---
+name: "Product card Fixed dimensions CZ - Cable - Sydney2 - 21:00"
+default: false
+parameters:
+  connectivity: 'Cable'
+  location: 'Sydney2'
+  firstViewOnly: true
+  runs: 1
+  url: "https://pixers.cz/fototapety/slunecny-den-na-poli-s-slunecnice-58819243"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 3000
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 3000
+    alerts: ["emailAlert"]
+  -
+    metric: fullyLoaded
+    max: 11000
+    alerts: ["emailAlert"]
+---

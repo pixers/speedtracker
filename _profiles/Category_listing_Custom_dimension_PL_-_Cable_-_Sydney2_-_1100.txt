@@ -1,0 +1,24 @@
+---
+name: "Category listing Custom dimension PL - Cable - Sydney2 - 11:00"
+default: false
+parameters:
+  connectivity: 'Cable'
+  location: 'Sydney2'
+  firstViewOnly: true
+  runs: 1
+  url: "https://pixers.pl/fototapety"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 2500
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 5000
+    alerts: ["emailAlert"]
+  -
+    metric: fullyLoaded
+    max: 12000
+    alerts: ["emailAlert"]
+---

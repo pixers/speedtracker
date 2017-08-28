@@ -1,0 +1,24 @@
+---
+name: "Home page PL - Cable - Frankfurt_Ruxit - 21:00"
+default: false
+parameters:
+  connectivity: 'Cable'
+  location: 'Frankfurt_Ruxit'
+  firstViewOnly: true
+  runs: 1
+  url: "https://pixers.pl"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 600
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 4000
+    alerts: ["emailAlert"]
+  -
+    metric: fullyLoaded
+    max: 10000
+    alerts: ["emailAlert"]
+---

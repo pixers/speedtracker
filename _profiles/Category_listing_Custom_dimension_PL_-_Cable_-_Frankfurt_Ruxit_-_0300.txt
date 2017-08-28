@@ -1,0 +1,24 @@
+---
+name: "Category listing Custom dimension PL - Cable - Frankfurt_Ruxit - 03:00"
+default: false
+parameters:
+  connectivity: 'Cable'
+  location: 'Frankfurt_Ruxit'
+  firstViewOnly: true
+  runs: 1
+  url: "https://pixers.pl/fototapety"
+  video: true
+budgets:
+  -
+    metric: TTFB
+    max: 1000
+    alerts: ["emailAlert"]
+  -
+    metric: firstPaint
+    max: 4000
+    alerts: ["emailAlert"]
+  -
+    metric: fullyLoaded
+    max: 10000
+    alerts: ["emailAlert"]
+---

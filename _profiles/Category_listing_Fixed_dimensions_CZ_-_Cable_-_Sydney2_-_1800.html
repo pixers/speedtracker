@@ -12,13 +12,13 @@ budgets:
   -
     metric: TTFB
     max: 2500
-    alerts: ["emailAlert"]
+    alerts: ['emailAlert', 'slackAlert']
   -
     metric: firstPaint
     max: 5000
-    alerts: ["emailAlert"]
+    alerts: ['emailAlert', 'slackAlert']
   -
     metric: fullyLoaded
     max: 12000
-    alerts: ["emailAlert"]
+    alerts: ['emailAlert', 'slackAlert']
 ---

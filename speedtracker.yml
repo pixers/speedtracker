@@ -70,3 +70,12 @@ alerts:
   emailAlert:
     type: 'email'
     recipients: ['ae34e80886eae6cf51e3254579ca689e4b1d228f5f3f9d2b']
+  slackAlert:
+    type: 'slack'
+    hookUrl: 'ab29ff1094bce79349e52f596b8f5b8243062cd34f7e8068ee845a04cc32f1232d14054c631569350ec0addaf42b8ac36fde153783009a7d7a31e0dcef22abae51f6a9d6b3be8805a5b132b5e1'
+    channel: '#speedtracker'
+    username: 'SpeedTracker'
+    iconEmoji: ':grimacing:'
+    
+    
+    

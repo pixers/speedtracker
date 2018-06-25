@@ -69,4 +69,4 @@ wptKey: "8273e805d6e7ae8445ee74062bc7198f1b5125ca1e748924ff841e169669a4693421"
 alerts:
   emailAlert:
     type: 'email'
-    recipients: ['b33cec0594f6add945ca305b60c45a9d0c152b']
+    recipients: ['ae34e80886eae6cf51e3254579ca689e4b1d228f5f3f9d2b']
